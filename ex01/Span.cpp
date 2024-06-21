@@ -23,7 +23,7 @@ void Span::addNumber(int number)
 
 void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-	if (arr.size() + std::distance(begin, end) > count)
+	if ((arr.size() + std::distance(begin, end)) > count)
 		throw std::out_of_range("Span is full");
 	arr.insert(arr.end(), begin, end);
 }
