@@ -1,14 +1,14 @@
-SRCS=  main.cpp Span.cpp
+SRCS=  main.cpp
 OBJS= $(SRCS:.cpp=.o)
 CFLAGS= -Wall -Wextra -Werror -std=c++98
 CPP= c++
-NAME= 01
+NAME= 02
 
 .PHONY: clean
 
 all: $(NAME)
 
-%.o: %.cpp  Span.hpp
+%.o: %.cpp  MutantStack.hpp
 	$(CPP) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
